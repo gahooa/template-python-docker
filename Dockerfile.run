@@ -4,6 +4,6 @@ cd $(dirname $0)
 
 TAG=$(basename $PWD)
 
-docker run --user $(id -u):$(id -g) --rm -it -v $PWD:/app $TAG
+docker run --user $(id -u):$(id -g) --rm -it -v $PWD:/app $TAG "$@"
 
 

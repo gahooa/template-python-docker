@@ -1,7 +1,7 @@
 # template-python-docker
 A template repository for getting a project up and running with docker and python
 
-## Usage:
+## Setup:
 
 1. Create a new repository using this as the template
 2. Clone your new repository
@@ -10,8 +10,17 @@ A template repository for getting a project up and running with docker and pytho
 `Dockerfile.build`: a script for building and tagging the image
 `Dockerfile.run`: an easy way to run 
 
-Run `./Dockerfile.build` followed by `./Dockerfile.run`
+Adjust `pip install` line in `Dockerfile` and then run `./Dockerfile.build`
 
-The code is held in `main.py` though this can be adjusted in `Dockerfile`
+## Running:
 
+The code is held in `main.py` though this can be adjusted in `Dockerfile`.  To run the project:
+
+`./Dockerfile.run`
+
+To get an interactive python shell
+
+`./Dockerfile.run python`
+
+Any args you pass to `Dockerfile.run` will be forwarded to the `docker run` command.
 
